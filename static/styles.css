@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+#titulo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+
+}
+
+@media only screen and (max-width: 700px){
+    #titulo{
+        left: 30%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #titulo{
+        left: 25%;
+    }
+}
+@media only screen and (max-width: 400px){
+    #titulo{
+        left: 20%;
+    }
+}
+
+@media only screen and (max-width: 280px){
+    #titulo{
+        left: 10%;
+        top: 5%;
+    }
+}
+
+
+#sub-titulo{
+    font-size: 0.8rem;
+}
+.box{
+    /* background-color: aqua; */
+    width: 70vw;
+    height: 50vh;
+}
+
+#p{
+    position: relative;
+    display: inline;
+    font-size: 1.0rem;
+}
+
+#p2{
+    position: relative;
+    display: inline;
+    font-size: 1.0rem;
+    left: 10px;
+}
+
+
+#textarea{
+    width: 100%;
+    border-color: lightblue;
+    border-width: 3px;
+}
+
+
+@media only screen and (max-width: 600px){
+    .box{
+        /* background-color: aqua; */
+        width: 70vw;
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 430px){
+    p{
+        display: block;
+    }
+    #p2{
+        left: 0px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 230px){
+    p{
+        font-size: 0.8rem;
+        display: block;
+    }
+}
