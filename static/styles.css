@@ -88,6 +88,13 @@ body{
     border-width: 3px;
 }
 
+.footer{
+    position: absolute;
+    display: inline;
+    width: 100vw;
+    text-align: center;
+    top: 90%;
+}
 
 @media only screen and (max-width: 600px){
     .box{
