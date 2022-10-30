@@ -1,11 +1,18 @@
 const textArea = document.querySelector("#textarea");
 
 const parseTextInfo = (text) => {
-    text = text.trim();
-    let characters = text.length;
-    let words = text.split(' ');
-    characters = characters;
-    let lines = text.split("\n").length;
+    let words;
+    let characters;
+    let lines;
+    if (text == '') {
+        return [0, 0, 0];
+    } else {
+        text = text.trim();
+        characters = text.length;
+        words = text.split(' ');
+        characters = characters;
+        lines = text.split("\n").length;
+    }
 
     return [words.length+lines-1, characters, lines];
 }
