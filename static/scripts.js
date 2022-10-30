@@ -1,19 +1,27 @@
-let textInfo = (text) => {
-    var characters = text.length
-    var words = text.split(' ')
-    return [characters, words.length]
+const textArea = document.querySelector("#textarea");
+
+const parseTextInfo = (text) => {
+    text = text.trim();
+    let characters = text.length;
+    let words = text.split(' ');
+    characters = characters;
+    let lines = text.split("\n").length;
+
+    return [words.length+lines-1, characters, lines];
 }
 
 
-let inhtml = () => {
-    let form = document.getElementById('textarea').value
-    let nome = textInfo(form)
-    document.getElementById('p').innerHTML = `Palavras: ${nome[1]}`
-    document.getElementById('p2').innerHTML = `caracteres: ${nome[0]}`
+const inhtml = () => {
+    const textArea = document.querySelector("#textarea");
+    const textInfo = parseTextInfo(textArea.value);
+    document.querySelector('#p').innerHTML = `Palavras: ${textInfo[0]}`;
+    document.querySelector('#p2').innerHTML = `caracteres: ${textInfo[1]}`;
+    document.querySelector('#p3').innerHTML = `linhas: ${textInfo[2]}`;
 }
 
+textArea.addEventListener('input', () => {
+    inhtml();
+})
 
-$(document).ready(function () {
-    $('#textarea').on('input', (event) => inhtml());
-});
+
 
